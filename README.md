@@ -35,12 +35,12 @@ defenses.
 We worked on Neural Cleanse to defend our best performing models both in BaN and Random 
 Backdoor. We aimed to compare the robustness of this defense against both of these dynamic 
 backdoor attack algorithms.
-## Example of how where multiple labels poisoned on CIFAR-10
+## Example of how were multiple labels poisoned on CIFAR-10
 The image was equally divided into 10 regions, and the trigger was randomly placed in one of those regions.
-![CIFAR-10T rigger Regions](CIFAR-10TriggerRegions.png)
+![CIFAR-10T rigger Regions](imgs/CIFAR-10TriggerRegions.png)
 
 50% of the dataset was attacked, and this new poissoned version was used as training dataset for the possioned model.
-![Random Sample Attacked Instances](RandomSampleAttackedInstances.png)
+![Random Sample Attacked Instances](imgs/RandomSampleAttackedInstances.png)
 
 ## Results obtained for ResNet18 model
 | DATASET   | ATTACK    | BENCHMARK ACCURACY | CLEAN ACCURACY | ATTACK SUCCESS RATE |
