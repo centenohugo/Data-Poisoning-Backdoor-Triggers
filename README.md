@@ -86,4 +86,5 @@ detected by our defense as we got the following anomaly socres and result. There
 
 STRIP is a defense on the data method. We tested it to detect anomalies in an attacked CIFAR-10 dataset. The results obtained show how Random Backdoor Attacks are difficult to defend, as
 they are a white-box type attack. If our defense had been successful, attacked images should present lower entropy values than clean images.
+
 ![STRIP defense results](imgs/STRIPDefense.png)
