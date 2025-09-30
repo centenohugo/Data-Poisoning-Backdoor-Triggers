@@ -50,3 +50,40 @@ The image was equally divided into 10 regions, and the trigger was randomly plac
 | MNIST | BaN | 99.14% | 98.53% | 94.2% |
 | CIFAR-10 | BaN | 84.1% | 83.7% | 99.97% |
 
+## Defenses
+We tested two types of defenses: Neural Cleanse and STRIP.
+
+Neural Cleanse was tested against a poisoned model trained for CIFAR-10 with a single label attach. The attacked lable was 0, and this was correctly
+detected by our defense as we got the following anomaly socres and result. Therefore, we can consider our defense to have been successful.
+<table>
+  <tr>
+    <th>Class</th>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <th>Score</th>
+    <td>3.79</td>
+    <td>0.62</td>
+    <td>1.95</td>
+    <td>0.11</td>
+    <td>2.00</td>
+    <td>3.29</td>
+    <td>0.32</td>
+    <td>0.11</td>
+    <td>1.29</td>
+    <td>0.71</td>
+  </tr>
+</table>
+
+STRIP is a defense on the data method. We tested it to detect anomalies in an attacked CIFAR-10 dataset. The results obtained show how Random Backdoor Attacks are difficult to defend, as
+they are a white-box type attack. If our defense had been successful, attacked images should present lower entropy values than clean images.
+![STRIP defense results](imgs/STRIPDefense.png)
